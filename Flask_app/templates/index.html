@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/dsgn.css">
+    <title>British Columbia Home Price</title>
+</head>
+<body>
+    <img
+    class="bg_img"
+    src="static/localimagereader.ashx.jpeg"
+    alt=""
+  >
+  <img
+  class="flag"
+  src="static/1200px-Flag_of_British_Columbia.svg.png"
+  alt=""
+>
+  <div class="main_text">
+    Home Price Prediction in Canada (British Columbia)
+  </div>
+    <form action="/" method="POST">
+        <div class="city">
+
+<!--House type-->      
+            <h2 class="name">Home type :</h2>
+            <select class="option" name="hometype">
+                <option disabled="disabled" selected="selected">--Please Select Home Type</option>
+                <option>Basement</option>
+                <option>Apartment</option>
+                <option>Condo</option>
+                <option>House</option>
+            </select><br>
+        </div>
+<!--AC cond-->  
+        <h2 class="nameAC">A/C Included :</h2>
+        <select class="option_AC" name="ACyesno">
+            <option disabled="disabled" selected="selected">--Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+        <!--Smoking-->  
+        <h2 class="name_smoke">Smoke :</h2>
+        <select class="option_smoke" name="smoke_yesno">
+            <option disabled="disabled" selected="selected">--Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+        <!--Pet-->  
+        <h2 class="name_pet">Pet Friendly :</h2>
+        <select class="option_pet" name="pet_yesno">
+            <option disabled="disabled" selected="selected">--Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select><br>
+        <!--Car_parking-->  
+        <h2 class="name_parking">Parking :</h2>
+        <select class="option_parking" name="parking">
+            <option disabled="disabled" selected="selected">--Please Select</option>
+            <option>One or more..</option>
+            <option>No</option>
+        </select><br>
+        <!--Appliances-->
+        <div class="app">
+        <h2 class="Appliances">Appliances :</h2>
+            <input class="a" type="checkbox" value="Laundry_In_Unit">Laundry (In Unit)<br>
+            <input class="b" type="checkbox" value="Laundry_In_Building">Laundry (In Building)<br>
+            <input class="c" type="checkbox" value="Fridge">Fridge / Freezer<br>
+            <input class="d" type="checkbox" value="Dishwasher">Dishwasher<br>
+            </div>
+<!--Bathroom-->
+        <h2 class="Bathrooms_name">Bathrooms :</h2>
+        <select class="Bathrooms" name="Bathrooms">
+            <option disabled="disabled" selected="selected">--Select Quantity</option>
+            <option>1</option>
+            <option>1+</option>
+        </select>
+    <!--wifi-->
+        <h2 class="wifi_name">Wi-Fi and More :</h2>
+        <select class="wifi" name="wifi">
+            <option disabled="disabled" selected="selected">--Select Your Option</option>
+            <option>Not Included</option>
+            <option>Internet</option>
+            <option>Cable / TV, Internet</option>
+        </select>
+        <!--Bedrooms-->
+        <h2 class="Bedrooms_name">Bedrooms :</h2>
+        <select class="Bedrooms" name="Bedrooms">
+            <option disabled="disabled" selected="selected">--Select your Room</option>
+            <option>Bachelor/Studio</option>
+            <option>single room</option>
+            <option>2 rooms</option>
+            <option>3 rooms</option>
+        </select>
+        <!--Bedrooms-->
+        <h2 class="Hydro_name">Utilities Included :</h2>
+        <select class="Hydro" name="Hydro">
+            <option disabled="disabled" selected="selected">--Select Your Utilities</option>
+            <option>All Utilities Included</option>
+            <option>Water Included</option>
+            <option>Water and Heat Included</option>
+            <option>Not Included</option>
+        </select>
+
+        <h2 class="size">Size S/Q</h2>
+        <input class="size_v" type="text" name="size" size="5" maxlength="6">
+        <button type="submit" value="submit">Press for Result</button>
+
+
+    </form>
+    {%if price%}
+    <p>Home price will be {{price}} $(CAD)</p>
+    {%endif%}
+
+
+
+
+</body>
+</html>
