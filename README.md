@@ -105,5 +105,6 @@ both of then resul was 77% and it was great and I saved model which is trained w
 #
 3. [Flask server (End of project)](https://github.com/tural327/price_pred_full_project)
 Basic web app was created for show results (html css used)
-*[](https://github.com/tural327/price_pred_full_project/blob/master/result.PNG)
+
+*![](https://github.com/tural327/price_pred_full_project/blob/master/result.PNG)
 
